@@ -1,0 +1,6 @@
+.dashboard {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 75px auto;
+  grid-template-rows: 55px auto;
+}
