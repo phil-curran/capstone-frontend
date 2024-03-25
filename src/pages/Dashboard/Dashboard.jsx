@@ -1,6 +1,6 @@
-import Sidebar from "../Dashboard/Sidebar/Sidebar";
-import Topbar from "../Dashboard/Topbar/Topbar";
-import Main from "../Dashboard/Main/Main";
+import Sidebar from "./Sidebar/Sidebar";
+import Topbar from "./Topbar/Topbar";
+import Main from "./Main/Main";
 
 import "./dashboard.css";
 
