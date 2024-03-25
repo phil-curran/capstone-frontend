@@ -1,4 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useRegister } from "../../hooks/useRegister";
 import validator from "validator";
 
 import {
@@ -21,7 +24,6 @@ const Gateway = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [pageType, setPageType] = useState("Login");
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
@@ -35,10 +37,6 @@ const Gateway = () => {
     setEmail(event.target.value);
   };
 
-  const handlePageToggle = () => {
-    pageType === "Login" ? setPageType("Register") : setPageType("Login");
-  };
-
   return (
     <div className="register container">
       <Card className="middle">
@@ -47,7 +45,7 @@ const Gateway = () => {
             <Box>
               <Center>
                 <Heading as="h1" size="lg">
-                  {pageType}
+                  Register
                 </Heading>
               </Center>
             </Box>
@@ -94,31 +92,28 @@ const Gateway = () => {
                 />
               </InputGroup>
             </Box>
-            {pageType === "Register" && (
-              <Box width="80%">
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    {confirmPassword === "" ? (
-                      <UnlockIcon boxSize={4} color="black5" />
-                    ) : (
-                      <LockIcon
-                        boxSize={5}
-                        color={
-                          password === confirmPassword ? "lightGreen" : "red"
-                        }
-                      />
-                    )}
-                  </InputLeftElement>
-                  <Input
-                    onChange={handleConfirmPassword}
-                    variant="flushed"
-                    type="password"
-                    placeholder="Confirm Password"
-                  />
-                </InputGroup>
-              </Box>
-            )}
-
+            <Box width="80%">
+              <InputGroup>
+                <InputLeftElement pointerEvents="none">
+                  {confirmPassword === "" ? (
+                    <UnlockIcon boxSize={4} color="black5" />
+                  ) : (
+                    <LockIcon
+                      boxSize={5}
+                      color={
+                        password === confirmPassword ? "lightGreen" : "red"
+                      }
+                    />
+                  )}
+                </InputLeftElement>
+                <Input
+                  onChange={handleConfirmPassword}
+                  variant="flushed"
+                  type="password"
+                  placeholder="Confirm Password"
+                />
+              </InputGroup>
+            </Box>
             <Box width="80%">
               <Button
                 isDisabled={
@@ -130,25 +125,16 @@ const Gateway = () => {
                 width="100%"
                 colorScheme="blue"
               >
-                {pageType}
+                Register
               </Button>
             </Box>
             <Box>
-              {pageType === "Login" ? (
-                <Text>
-                  Need to register?{"  "}
-                  <span className="link" onClick={handlePageToggle}>
-                    Register here
-                  </span>
-                </Text>
-              ) : (
-                <Text>
-                  Already registered?{"  "}
-                  <span className="link" onClick={handlePageToggle}>
-                    Login here
-                  </span>
-                </Text>
-              )}
+              <Text>
+                Already registered?{"  "}
+                <span className="link">
+                  <Link to="/login">Login here.</Link>
+                </span>
+              </Text>
             </Box>
           </VStack>
         </CardBody>

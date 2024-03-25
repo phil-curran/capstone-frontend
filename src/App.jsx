@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Gateway from "./pages/Gateway/Gateway";
+import Login from "./pages/Gateway/Login";
+import Register from "./pages/Gateway/Register";
 import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Gateway />} />
-          <Route path="/signup" element={<Gateway />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>

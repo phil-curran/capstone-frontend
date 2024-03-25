@@ -4,13 +4,16 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./chakra/theme.js";
 import App from "./App.jsx";
 import { AuthContextProvider } from "./contexts/AuthContext";
+import { ChecklistContextProvider } from "./contexts/ChecklistContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthContextProvider>
-      <ChakraProvider theme={theme}>
-        <App />
-      </ChakraProvider>
+      <ChecklistContextProvider>
+        <ChakraProvider theme={theme}>
+          <App />
+        </ChakraProvider>
+      </ChecklistContextProvider>
     </AuthContextProvider>
   </React.StrictMode>
 );
