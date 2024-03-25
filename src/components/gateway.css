@@ -1,0 +1,31 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  font-family: "IBM Plex Sans";
+  background-repeat: no-repeat;
+}
+
+.login,
+.register {
+  display: grid;
+}
+
+.login {
+  grid-template-columns: auto 450px auto;
+  grid-template-rows: auto 325px auto;
+}
+
+.register {
+  grid-template-columns: auto 450px auto;
+  grid-template-rows: auto 400px auto;
+}
+
+.middle {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.link {
+  color: blue;
+  margin-left: 4px;
+}

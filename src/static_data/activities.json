@@ -1,0 +1,117 @@
+{
+  "activities": [
+    {
+      "activeDuration": 2662000,
+      "activeZoneMinutes": {
+        "minutesInHeartRateZones": [
+          {
+            "minuteMultiplier": 0,
+            "minutes": 0,
+            "order": 0,
+            "type": "OUT_OF_ZONE",
+            "zoneName": "Out of Range"
+          },
+          {
+            "minuteMultiplier": 2,
+            "minutes": 0,
+            "order": 2,
+            "type": "CARDIO",
+            "zoneName": "Cardio"
+          },
+          {
+            "minuteMultiplier": 2,
+            "minutes": 0,
+            "order": 3,
+            "type": "PEAK",
+            "zoneName": "Peak"
+          },
+          {
+            "minuteMultiplier": 1,
+            "minutes": 0,
+            "order": 1,
+            "type": "FAT_BURN",
+            "zoneName": "Fat Burn"
+          }
+        ],
+        "totalMinutes": 0
+      },
+      "activityLevel": [
+        {
+          "minutes": 11,
+          "name": "sedentary"
+        },
+        {
+          "minutes": 11,
+          "name": "lightly"
+        },
+        {
+          "minutes": 6,
+          "name": "fairly"
+        },
+        {
+          "minutes": 16,
+          "name": "very"
+        }
+      ],
+      "activityName": "Walk",
+      "activityTypeId": 90013,
+      "averageHeartRate": 93,
+      "calories": 310,
+      "caloriesLink": "https://api.fitbit.com/1/user/-/activities/calories/date/2024-03-19/2024-03-19/1min/time/18:28/19:12.json",
+      "duration": 2662000,
+      "hasActiveZoneMinutes": true,
+      "heartRateLink": "https://api.fitbit.com/1/user/-/activities/heart/date/2024-03-19/2024-03-19/1sec/time/18:28:34/19:12:56.json",
+      "heartRateZones": [
+        {
+          "caloriesOut": 310.08594,
+          "max": 107,
+          "min": 30,
+          "minutes": 44,
+          "name": "Out of Range"
+        },
+        {
+          "caloriesOut": 0,
+          "max": 130,
+          "min": 107,
+          "minutes": 0,
+          "name": "Fat Burn"
+        },
+        {
+          "caloriesOut": 0,
+          "max": 158,
+          "min": 130,
+          "minutes": 0,
+          "name": "Cardio"
+        },
+        {
+          "caloriesOut": 0,
+          "max": 220,
+          "min": 158,
+          "minutes": 0,
+          "name": "Peak"
+        }
+      ],
+      "lastModified": "2024-03-20T02:25:39.000Z",
+      "logId": 62262245568,
+      "logType": "auto_detected",
+      "manualValuesSpecified": {
+        "calories": false,
+        "distance": false,
+        "steps": false
+      },
+      "originalDuration": 2662000,
+      "originalStartTime": "2024-03-19T18:28:34.000-07:00",
+      "startTime": "2024-03-19T18:28:34.000-07:00",
+      "steps": 2525,
+      "tcxLink": "https://api.fitbit.com/1/user/-/activities/62262245568.tcx"
+    }
+  ],
+  "pagination": {
+    "afterDate": "2024-03-19",
+    "limit": 100,
+    "next": "",
+    "offset": 0,
+    "previous": "",
+    "sort": "asc"
+  }
+}
