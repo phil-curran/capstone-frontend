@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useLogin } from "../../hooks/useLogin";
 import validator from "validator";
 
 import {
@@ -23,6 +24,7 @@ import "./gateway.css";
 const Gateway = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const { login, error, isLoading } = useLogin();
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
@@ -34,7 +36,7 @@ const Gateway = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password);
+    await login(email, password);
   };
 
   return (

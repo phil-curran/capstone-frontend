@@ -1,6 +1,5 @@
 import Sidebar from "./Sidebar/Sidebar";
 import Topbar from "./Topbar/Topbar";
-import Main from "./Main/Main";
 
 import "./dashboard.css";
 
@@ -9,7 +8,6 @@ const Dashboard = () => {
     <div className="dashboard">
       <Sidebar />
       <Topbar />
-      <Main />
     </div>
   );
 };
