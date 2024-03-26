@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useRegister } from "../../hooks/useRegister";
+import { useRegisterContext } from "../../hooks/useRegisterContext";
 import validator from "validator";
 
 import {
@@ -20,10 +20,12 @@ import {
 import { EmailIcon, LockIcon, UnlockIcon } from "@chakra-ui/icons";
 import "./gateway.css";
 
-const Gateway = () => {
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const { register, error, isLoading } = useRegisterContext();
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -40,6 +42,7 @@ const Gateway = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(email, password, confirmPassword);
+    await register(email, password);
   };
 
   return (
@@ -151,4 +154,4 @@ const Gateway = () => {
   );
 };
 
-export default Gateway;
+export default Register;
