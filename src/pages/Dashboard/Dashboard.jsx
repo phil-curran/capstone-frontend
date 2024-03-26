@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar";
 import Topbar from "./Topbar/Topbar";
 
@@ -8,6 +9,9 @@ const Dashboard = () => {
     <div className="dashboard">
       <Sidebar />
       <Topbar />
+      <div className="main">
+        <Outlet />
+      </div>
     </div>
   );
 };
