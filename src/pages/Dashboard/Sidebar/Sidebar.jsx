@@ -6,6 +6,13 @@ const Sidebar = () => {
   return (
     <>
       <div className="sidebar">
+        <Link className="zero" to="/dashboard">
+          <SidebarButton
+            position="zero"
+            icon_name="dashboard"
+            tooltip={"Home"}
+          />
+        </Link>
         <Link className="one" to="/dashboard/checklist">
           <SidebarButton
             position="one"

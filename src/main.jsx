@@ -9,10 +9,11 @@ import { ChecklistContextProvider } from "./contexts/ChecklistContext";
 import Login from "./pages/Gateway/Login.jsx";
 import Register from "./pages/Gateway/Register.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
-import Checklist from "./pages/Checklist.jsx";
+import Checklist from "./pages/Checklist/Checklist.jsx";
 import SleepTracking from "./pages/SleepTracking.jsx";
 import HeartRate from "./pages/HeartRate.jsx";
 import SpO2Monitoring from "./pages/SpO2Monitoring.jsx";
+import Main from "./pages/Main.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard />,
     children: [
+      {
+        path: "",
+        element: <Main />,
+      },
       {
         path: "checklist",
         element: <Checklist />,

@@ -7,19 +7,24 @@
   grid-template-rows: auto 75px 75px 75px 75px auto 75px;
   justify-items: center;
 }
-.one {
+
+.zero {
   grid-row: 2 / 3;
 }
 
-.two {
+.one {
   grid-row: 3 / 4;
 }
 
-.three {
+.two {
   grid-row: 4 / 5;
 }
-.four {
+
+.three {
   grid-row: 5 / 6;
+}
+.four {
+  grid-row: 6 / 7;
 }
 
 .account {
