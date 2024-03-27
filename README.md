@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./logo.png" alt="trakr logo" />
+</p>
+
 # <p align="center">trakr - frontend</p>
 
 A full-stack MERN app that helps you keep track of important habits and tasks.
