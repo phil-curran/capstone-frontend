@@ -1,0 +1,276 @@
+{
+        {
+      "dateOfSleep": "2024-03-23",
+        "summary": {
+          "deep": {
+            "count": 4,
+            "minutes": 91,
+            "thirtyDayAvgMinutes": 72
+          },
+          "light": {
+            "count": 23,
+            "minutes": 173,
+            "thirtyDayAvgMinutes": 234
+          },
+          "rem": {
+            "count": 7,
+            "minutes": 106,
+            "thirtyDayAvgMinutes": 98
+          },
+          "wake": {
+            "count": 23,
+            "minutes": 72,
+            "thirtyDayAvgMinutes": 72
+          }
+        },
+        "minutesAsleep": 370,
+        "minutesAwake": 72
+    },
+        {
+      "dateOfSleep": "2024-03-22",
+        "summary": {
+          "deep": {
+            "count": 2,
+            "minutes": 21,
+            "thirtyDayAvgMinutes": 74
+          },
+          "light": {
+            "count": 26,
+            "minutes": 269,
+            "thirtyDayAvgMinutes": 232
+          },
+          "rem": {
+            "count": 5,
+            "minutes": 90,
+            "thirtyDayAvgMinutes": 99
+          },
+          "wake": {
+            "count": 20,
+            "minutes": 59,
+            "thirtyDayAvgMinutes": 73
+          }
+        },
+        "minutesAsleep": 380,
+        "minutesAwake": 59,
+      },
+          {
+      "dateOfSleep": "2024-03-21",
+
+        "summary": {
+          "deep": {
+            "count": 4,
+            "minutes": 93,
+            "thirtyDayAvgMinutes": 74
+          },
+          "light": {
+            "count": 27,
+            "minutes": 242,
+            "thirtyDayAvgMinutes": 230
+          },
+          "rem": {
+            "count": 11,
+            "minutes": 101,
+            "thirtyDayAvgMinutes": 100
+          },
+          "wake": {
+            "count": 28,
+            "minutes": 57,
+            "thirtyDayAvgMinutes": 73
+          }
+        },
+        "minutesAsleep": 436,
+        "minutesAwake": 57,
+      },
+          {
+      "dateOfSleep": "2024-03-20",
+        "summary": {
+          "deep": {
+            "count": 4,
+            "minutes": 77,
+            "thirtyDayAvgMinutes": 74
+          },
+          "light": {
+            "count": 28,
+            "minutes": 222,
+            "thirtyDayAvgMinutes": 232
+          },
+          "rem": {
+            "count": 5,
+            "minutes": 92,
+            "thirtyDayAvgMinutes": 100
+          },
+          "wake": {
+            "count": 25,
+            "minutes": 51,
+            "thirtyDayAvgMinutes": 74
+          }
+        },
+        "minutesAsleep": 391,
+        "minutesAwake": 51,
+      },
+          {
+      "dateOfSleep": "2024-03-19",
+        "summary": {
+          "deep": {
+            "count": 5,
+            "minutes": 85,
+            "thirtyDayAvgMinutes": 74
+          },
+          "light": {
+            "count": 38,
+            "minutes": 211,
+            "thirtyDayAvgMinutes": 232
+          },
+          "rem": {
+            "count": 8,
+            "minutes": 134,
+            "thirtyDayAvgMinutes": 99
+          },
+          "wake": {
+            "count": 33,
+            "minutes": 90,
+            "thirtyDayAvgMinutes": 74
+          }
+        },
+        "minutesAsleep": 430,
+        "minutesAwake": 90,
+      },
+          {
+      "dateOfSleep": "2024-03-18",
+      "levels": {
+        "summary": {
+          "deep": {
+            "count": 5,
+            "minutes": 88,
+            "thirtyDayAvgMinutes": 74
+          },
+          "light": {
+            "count": 23,
+            "minutes": 153,
+            "thirtyDayAvgMinutes": 237
+          },
+          "rem": {
+            "count": 9,
+            "minutes": 140,
+            "thirtyDayAvgMinutes": 97
+          },
+          "wake": {
+            "count": 22,
+            "minutes": 59,
+            "thirtyDayAvgMinutes": 75
+          }
+        },
+        "minutesAsleep": 381,
+        "minutesAwake": 59,
+      },
+          {
+      "dateOfSleep": "2024-03-17",
+        "summary": {
+          "deep": {
+            "count": 3,
+            "minutes": 85,
+            "thirtyDayAvgMinutes": 73
+          },
+          "light": {
+            "count": 30,
+            "minutes": 237,
+            "thirtyDayAvgMinutes": 234
+          },
+          "rem": {
+            "count": 4,
+            "minutes": 89,
+            "thirtyDayAvgMinutes": 97
+          },
+          "wake": {
+            "count": 29,
+            "minutes": 75,
+            "thirtyDayAvgMinutes": 75
+          }
+        }
+      },
+      "minutesAwake": 75,
+      "minutesAsleep": 411,
+
+    },
+        {
+      "dateOfSleep": "2024-03-16",
+        "summary": {
+          "deep": {
+            "count": 3,
+            "minutes": 85,
+            "thirtyDayAvgMinutes": 72
+          },
+          "light": {
+            "count": 33,
+            "minutes": 203,
+            "thirtyDayAvgMinutes": 235
+          },
+          "rem": {
+            "count": 9,
+            "minutes": 129,
+            "thirtyDayAvgMinutes": 96
+          },
+          "wake": {
+            "count": 33,
+            "minutes": 86,
+            "thirtyDayAvgMinutes": 74
+          }
+        },
+        "minutesAsleep": 417,
+        "minutesAwake": 86,
+      },
+          {
+      "dateOfSleep": "2024-03-15",
+        "summary": {
+          "deep": {
+            "count": 7,
+            "minutes": 70,
+            "thirtyDayAvgMinutes": 73
+          },
+          "light": {
+            "count": 45,
+            "minutes": 278,
+            "thirtyDayAvgMinutes": 233
+          },
+          "rem": {
+            "count": 3,
+            "minutes": 55,
+            "thirtyDayAvgMinutes": 100
+          },
+          "wake": {
+            "count": 39,
+            "minutes": 82,
+            "thirtyDayAvgMinutes": 74
+          },
+          "minutesAsleep": 403,
+          "minutesAwake": 82,
+        }
+      },
+          {
+      "dateOfSleep": "2024-03-14",
+        "summary": {
+          "deep": {
+            "count": 2,
+            "minutes": 54,
+            "thirtyDayAvgMinutes": 74
+          },
+          "light": {
+            "count": 18,
+            "minutes": 146,
+            "thirtyDayAvgMinutes": 237
+          },
+          "rem": {
+            "count": 4,
+            "minutes": 91,
+            "thirtyDayAvgMinutes": 101
+          },
+          "wake": {
+            "count": 18,
+            "minutes": 49,
+            "thirtyDayAvgMinutes": 76
+          }
+        },
+        "minutesAsleep": 291,
+        "minutesAwake": 49,
+      }
+}

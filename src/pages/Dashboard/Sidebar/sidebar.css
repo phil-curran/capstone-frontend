@@ -1,7 +1,7 @@
 .sidebar {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  background-color: #353b48;
+  background-color: #1f1f1f;
   display: grid;
   grid-template-rows: auto 75px 75px 75px 75px auto 75px;
   justify-items: center;
@@ -42,5 +42,5 @@
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-  color: #00a8ff;
+  color: #27ae60;
 }

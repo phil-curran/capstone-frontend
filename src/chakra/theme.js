@@ -2,7 +2,7 @@ import "@fontsource/ibm-plex-mono";
 
 import { extendTheme } from "@chakra-ui/react";
 
-export const theme = extendTheme({
+const theme = extendTheme({
   colors: {
     black10: "#000000",
     black9: "#1a1a1a",
@@ -26,22 +26,7 @@ export const theme = extendTheme({
     white8: "#333333",
     white9: "#1a1a1a",
     white10: "#000000",
-    lightGreen: "#1abc9c",
-    darkGreen: "#16a085",
-    lightLime: "#4cd137",
-    darkLime: "#27ae60",
-    lightBlue: "#0097e6",
-    darkBlue: "#2980b9",
-    lightRed: "#e84118",
-    darkRed: "#c0392b",
-    brightYellow: "#fbc531",
-    darkYellow: "#f39c12",
-    brightOrange: "#e67e22",
-    darkOrange: "#d35400",
-    lightPurple: "#9b59b6",
-    darkPurple: "#8e44ad",
-    lightNavy: "#353b48",
-    darkNavy: "#2f3640",
+    greenHighlight: "#27ae60",
   },
   font: {
     body: "IBM Plex Mono, sans-serif",

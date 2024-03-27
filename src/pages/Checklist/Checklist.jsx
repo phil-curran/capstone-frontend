@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import getTodayFormattedDate from "../../utilities/getTodayFormattedDate";
@@ -13,11 +14,14 @@ import {
   Checkbox,
   Box,
   VStack,
+  Spinner,
+  Flex,
 } from "@chakra-ui/react";
 import Graph from "./Graph";
 import { createChecklist, fetchChecklist, updateChecklist } from "./apiHooks";
-
+import { TempSpinner } from "../../components/Spinner";
 import "./checklist.css";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 const Checklist = () => {
   const [checklist, setChecklist] = useState(null);
@@ -25,20 +29,18 @@ const Checklist = () => {
   const [dateInfo, setDateInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [historicalData, setHistoricalData] = useState(null);
+  const { user } = useAuthContext();
+  console.log("user: ", user);
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
         const data = await fetchChecklist();
-        console.log(data);
         setChecklist(data.checklist);
         setHistoricalData(data.graphData);
         setDateInfo(data.checklist.formattedDateString);
-        console.log(data.historicalData);
         setToday(data.todayData);
-
-        // Other logic from getChecklistData function goes here
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching checklist:", error.message);
@@ -50,6 +52,7 @@ const Checklist = () => {
 
   const handleUpdate = async (updatedChecklist) => {
     try {
+      console.log("updatedChecklist: ", updatedChecklist);
       await updateChecklist(updatedChecklist);
       const updatedData = await fetchChecklist(); // Fetch updated data after update
       setChecklist(updatedData);
@@ -64,7 +67,11 @@ const Checklist = () => {
       Object.entries(item).map(([key, value]) => {
         if (key.startsWith("task")) {
           return (
-            <Checkbox {...(value > 0 ? { isChecked: true } : {})} key={key}>
+            <Checkbox
+              // onChange={handleUpdate}
+              {...(value > 0 ? { isChecked: true } : {})}
+              key={key}
+            >
               {key}
             </Checkbox>
           );
@@ -77,44 +84,48 @@ const Checklist = () => {
   return (
     <div className="checklistPanel">
       <Center>
-        <Heading as="h2" size="xl">
+        <Heading as="h2" size="lg">
           Checklist
         </Heading>
       </Center>
-      <Tabs isFitted>
-        <TabList mb="1em">
-          <Tab>Today</Tab>
-          <Tab>Overview</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <Box>
-              <Center>
-                <Heading as="h3" size="md">
-                  {dateInfo && dateInfo}
-                </Heading>
-              </Center>
-            </Box>
-            <Stack marginTop={8} spacing={5} direction="column">
-              {renderTodayChecklist()}
-            </Stack>
-          </TabPanel>
-          <TabPanel>
-            <Center>
-              <VStack>
-                <Box>
-                  <Heading as="h3" size="lg">
-                    Timeline
+      {isLoading ? (
+        <TempSpinner />
+      ) : (
+        <Tabs isFitted>
+          <TabList mb="1em">
+            <Tab>Today</Tab>
+            <Tab>Overview</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <Box>
+                <Center>
+                  <Heading as="h3" size="md">
+                    {dateInfo && dateInfo}
                   </Heading>
-                </Box>
-                <Box>
-                  <Graph historicalData={historicalData} />
-                </Box>
-              </VStack>
-            </Center>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
+                </Center>
+              </Box>
+              <Stack marginTop={8} spacing={5} direction="column">
+                {renderTodayChecklist()}
+              </Stack>
+            </TabPanel>
+            <TabPanel>
+              <Center>
+                <VStack>
+                  <Box>
+                    <Heading as="h3" size="md">
+                      Timeline
+                    </Heading>
+                  </Box>
+                  <Box>
+                    <Graph historicalData={historicalData} />
+                  </Box>
+                </VStack>
+              </Center>
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      )}
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useLogin } from "../../hooks/useLogin";
 import validator from "validator";
+import { Navigate } from "react-router-dom";
 
 import {
   Box,
@@ -37,6 +38,7 @@ const Gateway = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await login(email, password);
+    <Navigate to="/dashboard" />;
   };
 
   return (

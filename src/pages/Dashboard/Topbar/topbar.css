@@ -1,6 +1,6 @@
 .topbar {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  background-color: #353b48;
+  background-color: #1f1f1f;
   padding-right: 16px;
 }

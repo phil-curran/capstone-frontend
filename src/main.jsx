@@ -5,12 +5,13 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./chakra/theme.js";
 import { AuthContextProvider } from "./contexts/AuthContext";
 import { ChecklistContextProvider } from "./contexts/ChecklistContext";
+import { useAuthContext } from "./hooks/useAuthContext.js";
 
 import Login from "./pages/Gateway/Login.jsx";
 import Register from "./pages/Gateway/Register.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import Checklist from "./pages/Checklist/Checklist.jsx";
-import SleepTracking from "./pages/SleepTracking.jsx";
+import SleepData from "./pages/SleepData/SleepData.jsx";
 import HeartRate from "./pages/HeartRate.jsx";
 import SpO2Monitoring from "./pages/SpO2Monitoring.jsx";
 import Main from "./pages/Main.jsx";
@@ -37,8 +38,8 @@ const router = createBrowserRouter([
         element: <Checklist />,
       },
       {
-        path: "sleep-tracking",
-        element: <SleepTracking />,
+        path: "sleep-data",
+        element: <SleepData />,
       },
       {
         path: "heart-rate",

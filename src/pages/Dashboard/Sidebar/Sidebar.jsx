@@ -20,7 +20,7 @@ const Sidebar = () => {
             tooltip={"Checklist"}
           />
         </Link>
-        <Link className="two" to="/dashboard/sleep-tracking">
+        <Link className="two" to="/dashboard/sleep-data">
           <SidebarButton
             position="two"
             icon_name="sleep_score"

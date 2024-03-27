@@ -46,6 +46,7 @@ export const fetchChecklist = async () => {
     }
 
     const json = await response.json();
+
     // Get today's formatted date
     const now = getTodayFormattedDate();
 
@@ -65,7 +66,6 @@ export const fetchChecklist = async () => {
     return { checklist: now, json, todayData, graphData };
   } catch (error) {
     console.error("Error fetching checklist:", error.message);
-    throw error;
   }
 };
 

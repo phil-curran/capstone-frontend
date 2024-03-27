@@ -9,13 +9,27 @@ import {
   Tooltip,
 } from "recharts";
 
-const Graph = ({ historicalData }) => {
+const Graph = ({ sleepData }) => {
+  class Datapoint {
+    constructor(name, score) {
+      this.name = name;
+      this.score = score;
+      this.pv = 2400;
+    }
+  }
+
+  let dataArray = [];
+
+  sleepData.map((entry) => {
+    let time = entry.minutesAsleep + entry.minutesAwake;
+    dataArray.push(new Datapoint(entry.dateOfSleep, time));
+  });
   return (
     <Box className="checklistChart">
       <LineChart
         width={1000}
         height={600}
-        data={historicalData}
+        data={dataArray}
         margin={{ right: 40 }}
       >
         <Line
