@@ -13,12 +13,7 @@ const SidebarButton = ({ position, icon_name, tooltip }) => {
         height="50px"
         borderRadius={8}
       >
-        <span
-          color="blue"
-          width="60px"
-          height="60px"
-          className="material-symbols-outlined"
-        >
+        <span width="60px" height="60px" className="material-symbols-outlined">
           {icon_name}
         </span>
       </Button>
