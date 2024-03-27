@@ -46,7 +46,7 @@ const SleepData = () => {
                 </Center>
               </Box>
               <Stack marginTop={8} spacing={5} direction="column">
-                <p>blah</p>
+                <p>A detailed display of today data will appear here.</p>
               </Stack>
             </TabPanel>
             <TabPanel>

@@ -1,6 +1,6 @@
 # <p align="center">trakr - frontend</p>
 
-Like weather.com, but better, and without the annoying ads.
+A full-stack MERN app that helps you keep track of important habits and tasks.
 
 ## Table of Contents
 
@@ -15,30 +15,16 @@ Like weather.com, but better, and without the annoying ads.
 
 - HTML / CSS / Javascript
 - React / [Vite.js](https://vitejs.dev/)
-- [React Router](https://reactrouter.com/en/main)
-- [Chakra UI](https://chakra-ui.com/)
-- [OpenWeather API](https://openweathermap.org/api/one-call-3)
+- [ChakraUI](https://chakra-ui.com/)
+- [Recharts](https://recharts.org/en-US/)
+- [React Context API](https://react.dev/learn/managing-state#scaling-up-with-reducer-and-context)
+- [Fitbit API](https://www.fitbit.com/dev)
 
 ## Description <a id="description"></a>
 
-Like weather,com, but without all of the annoying ads / tracking..
-
-## Views
-
-Current Weather:
-![alt text](./public/now.png)
-
-Hourly Forecast:
-![alt text](./public/hourly.png)
-
-10-day Forecast:
-![alt text](./public/10-day.png)
+This frontend displays content for the backend of [trakr - backend](https://github.com/phil-curran/capstone-backend). This interface is built with React, ChakraUI, and Recharts.
 
 ## Project Setup / Installation Instructions <a id="setup"></a>
-
-### Get an API KEY from OpenWeather
-
-https://openweathermap.org/api/one-call-3
 
 ### Clone the project
 
@@ -50,7 +36,7 @@ From the root directory, run: <code>npm i</code>
 
 ### Update example.env file
 
-Rename <code>example.env</code> to <code>.env</code> and replace " Your API Key Here. " with your actual API Key from OpenWeather.
+Rename <code>example.env</code> to <code>.env</code> and replace " json web token hash " with an actual json web token hash.
 
 ### Run the project
 
@@ -58,16 +44,13 @@ From the root directory, run: <code>npm run dev</code>
 
 ## Known Bugs <a id="bugs"></a>
 
-None at this time.
+- The app is not currently responsive. It is best viewed on a desktop or tablet.
+- Issues with router navigation and redirects after login / registration / logout.
+- Issues with auto update of current checklist / date not functioning.
 
 ## Roadmap
 
-- Implement Google's [Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) to allow for custom location selection
-- Pin favorite locations to toolbar with localStorage
-- Add a modal component that lets users store their api key in localStorage
-- UI improvements
-- Update Hourly section to show day / date break between days.
-- More custom icons
+- Implement OAuth for fetching data from Fitbit API so it can be done realtime.
 
 ## License <a id="license"></a>
 
